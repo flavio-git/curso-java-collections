@@ -1,0 +1,10 @@
+1,Trabalhando com ArrayList, 25
+2,Lista de objetos, 19
+3,Relacionamentos com coleções, 24
+4,Mais práticas com relacionamentos, 17
+5,O poder dos sets, 19
+6,Aplicando o set no modelo, 11
+7,Equals e hashcode, 21
+8,Outros sets e iterators, 12
+9,Qual collection usar, 8
+10,Mapas, 18
