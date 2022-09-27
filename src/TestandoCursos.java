@@ -13,5 +13,7 @@ public class TestandoCursos {
 
         System.out.println(javaColecoes.getAulas());
 
+        System.out.println(javaColecoes);
+
     }
 }

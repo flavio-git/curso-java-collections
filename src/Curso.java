@@ -31,4 +31,16 @@ public class Curso {
         this.aulas.add(aula);
     }
 
+    public int getTempoTotalAula(){
+        return this.aulas.stream().mapToInt(Aula::getTempo).sum(); // método que veio com o Java 8
+    }
+
+    @Override
+    public String toString(){
+        return "Curso: " + this.nome
+                + " | Instrutor: " + this.instrutor
+                + " | Quantidade aulas: " + this.aulas.size()
+                + " | Tempo total: " + getTempoTotalAula();
+    }
+
 }
