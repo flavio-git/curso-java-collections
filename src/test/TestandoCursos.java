@@ -42,5 +42,7 @@ public class TestandoCursos {
 
         System.out.printf("Cadastro tem? Nome: %s, Resultado consulta: %b", novoAluno.getNome(), buscaNovoAluno);
 
+
+
     }
 }

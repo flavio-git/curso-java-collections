@@ -7,6 +7,7 @@ public class Curso {
     private String instrutor;
     private List<Aula> aulas = new ArrayList<>();
     private Set<Aluno> alunos = new HashSet<>();
+    private Map<Integer, Aluno> alunoMap= new HashMap<>();
 
     public Curso(String nome, String instrutor, List<Aula> aulas) {
         this.nome = nome;
@@ -38,6 +39,7 @@ public class Curso {
 
     public void matricula(Aluno aluno) {
         this.alunos.add(aluno);
+        this.alunoMap.put(aluno.getNumeroMatricula(), aluno);
     }
 
     public Set<Aluno> getAlunos() {
@@ -46,6 +48,10 @@ public class Curso {
 
     public boolean estaMatriculado(Aluno aluno) {
         return this.alunos.contains(aluno); // Contains chama o método equals da classe, no caso aqui equals da classe model.Aluno
+    }
+
+    public Aluno procuraAlunoPorMatricula(int matricula){
+        return this.alunoMap.get(matricula);
     }
 
     @Override
