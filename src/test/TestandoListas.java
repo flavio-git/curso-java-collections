@@ -1,10 +1,12 @@
+package test;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class TestandoListas {
     public static void main(String[] args) {
 
-        String aula1 = "Modelando a classe Aula";
+        String aula1 = "Modelando a classe model.Aula";
         String aula2 = "Conhecendo mais de listas";
         String aula3 = "Trabalhando com Cursos e Sets";
 
@@ -16,21 +18,21 @@ public class TestandoListas {
 
         System.out.println(aulas);
 
-        System.out.printf("Aula na primeira posição: %s %n", aulas.get(0));
+        System.out.printf("model.Aula na primeira posição: %s %n", aulas.get(0));
 
         System.out.println("\nImprimindo elementos do array com for clássico: ");
         for (int i = 0; i < aulas.size(); i++) {
-            System.out.printf("Aula: %s %n", aulas.get(i));
+            System.out.printf("model.Aula: %s %n", aulas.get(i));
         }
 
         System.out.println("\nImprimindo elementos do array com for each: ");
         for (String aula: aulas){
-            System.out.printf("Aula: %s %n", aula);
+            System.out.printf("model.Aula: %s %n", aula);
         }
 
         System.out.println("\nImprimindo elementos do array com método for each da classe ArrayList: ");
         aulas.forEach(aula -> {
-            System.out.printf("Aula: %s %n", aula);
+            System.out.printf("model.Aula: %s %n", aula);
         });
 
 

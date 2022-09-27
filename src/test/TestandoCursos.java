@@ -1,3 +1,10 @@
+package test;
+
+import model.Aluno;
+import model.Aula;
+import model.Curso;
+import model.LeitorArquivoAulas;
+
 import java.io.FileNotFoundException;
 import java.util.List;
 
@@ -30,7 +37,7 @@ public class TestandoCursos {
 
         boolean buscaNovoAluno = javaColecoes.estaMatriculado(novoAluno);
 
-        System.out.printf("Aluno: %s, hashcode: %d | Aluno: %s, hashcode: %d %n",
+        System.out.printf("model.Aluno: %s, hashcode: %d | model.Aluno: %s, hashcode: %d %n",
                 hellen.getNome(), hellen.hashCode(), novoAluno.getNome(), novoAluno.hashCode());
 
         System.out.printf("Cadastro tem? Nome: %s, Resultado consulta: %b", novoAluno.getNome(), buscaNovoAluno);

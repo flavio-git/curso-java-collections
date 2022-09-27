@@ -1,3 +1,5 @@
+package model;
+
 import java.util.*;
 
 public class Curso {
@@ -43,12 +45,12 @@ public class Curso {
     }
 
     public boolean estaMatriculado(Aluno aluno) {
-        return this.alunos.contains(aluno); // Contains chama o método equals da classe, no caso aqui equals da classe Aluno
+        return this.alunos.contains(aluno); // Contains chama o método equals da classe, no caso aqui equals da classe model.Aluno
     }
 
     @Override
     public String toString() {
-        return "Curso: " + this.nome
+        return "model.Curso: " + this.nome
                 + " | Instrutor: " + this.instrutor
                 + " | Quantidade aulas: " + this.aulas.size()
                 + " | Tempo total: " + getTempoTotalAula();

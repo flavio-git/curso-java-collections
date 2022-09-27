@@ -1,3 +1,5 @@
+package model;
+
 public class Aula implements Comparable<Aula> {
     private int sequencia;
     private String nome;

@@ -1,3 +1,5 @@
+package model;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -19,7 +21,7 @@ public class LeitorArquivoAulas {
 
             int sequenciaAula = Integer.parseInt(aulaFile[0]);
 
-            Aula aula = new Aula(sequenciaAula, nomeAula, tempoAula); // criando instância de Aula
+            Aula aula = new Aula(sequenciaAula, nomeAula, tempoAula); // criando instância de model.Aula
             aulas.add(aula); // adicionando no ArrayList
         }
         return aulas;

@@ -1,3 +1,7 @@
+package test;
+
+import model.Aula;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -13,7 +17,7 @@ public class TestandoListasReferencias {
 
         ArrayList<Aula> aulas = new ArrayList<>();
 
-        // percorre o aquivo, le uma linha, cria uma Aula e adiciona no ArrayList
+        // percorre o aquivo, le uma linha, cria uma model.Aula e adiciona no ArrayList
         while (aulasFile.hasNextLine()) {
             String[] aulaFile = aulasFile.nextLine().split(",");
 
@@ -24,7 +28,7 @@ public class TestandoListasReferencias {
 
             int sequenciaAula = Integer.parseInt(aulaFile[0]);
 
-            Aula aula = new Aula(sequenciaAula, nomeAula, tempoAula); // criando instância de Aula
+            Aula aula = new Aula(sequenciaAula, nomeAula, tempoAula); // criando instância de model.Aula
             aulas.add(aula); // adicionando no ArrayList
         }
 
@@ -34,7 +38,7 @@ public class TestandoListasReferencias {
 
         System.out.println("Classificando a lista de acordo com o nome:");
 
-        //Collections.sort(aulas); // irá utilizar o método compareTo implementado na classe Aula
+        //Collections.sort(aulas); // irá utilizar o método compareTo implementado na classe model.Aula
 
         System.out.println(aulas);
 
