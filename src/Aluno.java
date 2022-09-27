@@ -3,7 +3,10 @@ public class Aluno {
     private int numeroMatricula;
 
     public Aluno(String nome, int numeroMatricula) {
-        this.nome = nome;
+        if (nome == null) {
+            throw new NullPointerException("Nome não pode ser nulo.");
+        }
+        this.nome = nome.toLowerCase();
         this.numeroMatricula = numeroMatricula;
     }
 
@@ -16,7 +19,20 @@ public class Aluno {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return "Nome: " + this.nome + " | Matricula: " + this.numeroMatricula;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        Aluno outroAluno = (Aluno) obj;
+        return this.nome.equals(outroAluno.getNome());
+    }
+
+    @Override
+    public int hashCode() {
+        return this.nome.hashCode();
+    }
+
+
 }

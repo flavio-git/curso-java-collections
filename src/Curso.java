@@ -34,7 +34,7 @@ public class Curso {
         return this.aulas.stream().mapToInt(Aula::getTempo).sum(); // método que veio com o Java 8
     }
 
-    public void matricula(Aluno aluno){
+    public void matricula(Aluno aluno) {
         this.alunos.add(aluno);
     }
 
@@ -42,6 +42,9 @@ public class Curso {
         return Collections.unmodifiableSet(alunos);
     }
 
+    public boolean estaMatriculado(Aluno aluno) {
+        return this.alunos.contains(aluno); // Contains chama o método equals da classe, no caso aqui equals da classe Aluno
+    }
 
     @Override
     public String toString() {

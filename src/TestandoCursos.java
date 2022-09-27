@@ -22,9 +22,18 @@ public class TestandoCursos {
         javaColecoes.matricula(new Aluno("Luciana", 5910));
         javaColecoes.matricula(new Aluno("Bruno", 5911));
 
-        System.out.println("\nAlunos matriculados: ");
-        javaColecoes.getAlunos().forEach(aluno -> {
-            System.out.println(aluno);
-        });
+        Aluno hellen = new Aluno("Hellen", 5030);
+
+        javaColecoes.matricula(hellen);
+
+        Aluno novoAluno = new Aluno("hellen", 5030);
+
+        boolean buscaNovoAluno = javaColecoes.estaMatriculado(novoAluno);
+
+        System.out.printf("Aluno: %s, hashcode: %d | Aluno: %s, hashcode: %d %n",
+                hellen.getNome(), hellen.hashCode(), novoAluno.getNome(), novoAluno.hashCode());
+
+        System.out.printf("Cadastro tem? Nome: %s, Resultado consulta: %b", novoAluno.getNome(), buscaNovoAluno);
+
     }
 }
